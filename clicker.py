@@ -9,11 +9,13 @@ countryButton = (913, 716)
 
 # First page: Autofill with Resume
 def firstPage():
+    sleep(5)
     pag.click(continueButton)
 # firstPage()
 
 # #second page: My information
 def myInformation():
+    sleep(5)
     pag.click(countryButton)
     pag.press('enter')
     sleep(1)
@@ -31,12 +33,14 @@ def myInformation():
     sleep(1)
     pag.press('tab')
     pag.write('97229')
+    pag.click(continueButton)
 
 # myInformation()
 
 #Page 3: My Experience
 def myExperience():
 
+    sleep(5)
     jobTitleButton = (853,834)
     pag.click(jobTitleButton)
     pag.press('tab')
@@ -84,11 +88,13 @@ def myExperience():
     sleep(.5)
     pag.press('enter')
     sleep(2)
+    pag.click(continueButton)
 
 # myExperience()
 
 #page 4: application questions
 def applicationQuestions():
+    sleep(5)
     pag.press('tab')
     pag.press('tab')
     sleep(.5)
@@ -204,22 +210,29 @@ def applicationQuestions():
     pag.press('down')
     pag.press('down')
     pag.press('down')
-    sleep(.5) 
+    sleep(.5)
+    pag.press('enter') 
     pag.press('enter') #16) No
+
+    pag.click(continueButton)
 
      
 # applicationQuestions()
 
-listOfFunctions = [firstPage(), myInformation(), myExperience(), applicationQuestions()]
+listOfFunctions = [firstPage, myInformation, myExperience, applicationQuestions]
+functionCall = 0
 
-for function in listOfFunctions:
-    while True:
-        confirm = input("Continue to next page? y/n")
-        if confirm == 'y':
-            function    
-            pag.click(continueButton)
-        elif confirm == 'n':
-            print("Ok. We'll wait")
+while functionCall < len(listOfFunctions):
+    for index, func in enumerate(listOfFunctions):
+        ask = input('Has the page loaded? y/n ')
+        if ask == 'y':
+            listOfFunctions[index]()
+            functionCall += 1
+        elif ask == 'n':
+            continue
+
+
+print('over')
 
 
     
