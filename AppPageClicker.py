@@ -120,11 +120,13 @@ def applicationQuestions():
     pag.press('enter') #15) Yes
     pag.scroll(-900)
     pag.moveTo(916,631,2) #trying some different shit here
-    pag.click()
+    pag.click(916, 631)
     pag.moveTo(579, 750,2)
-    pag.click()
-    pag.moveTo(continueButton, 2)
-    pag.click(continueButton)
+    pag.click(579, 750)
+    pag.moveTo(1499, 977, 2)
+    pag.click(1499, 977)
+
+
 applicationQuestions()
 
 print('over')
