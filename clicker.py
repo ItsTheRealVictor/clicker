@@ -1,6 +1,8 @@
 import pyautogui as pag
 from time import sleep
 
+
+# testing testing testing testing
 sleep(5)
 
 continueButton = (1499, 977)
@@ -124,7 +126,7 @@ def applicationQuestions():
     pag.press('down')
     pag.press('down')
     sleep(.5)
-    pag.press('enter') # 4) No 
+    pag.press('enter') # 4) No
     sleep(.5)
     pag.press('tab')
     sleep(.5)
@@ -188,21 +190,21 @@ def applicationQuestions():
     pag.press('down')
     pag.press('down')
     pag.press('down')
-    sleep(.5) 
+    sleep(.5)
     pag.press('enter') # 13) No
     sleep(.5)
     pag.press('tab')
     sleep(.5)
     pag.press('down')
     pag.press('down')
-    sleep(.5) 
+    sleep(.5)
     pag.press('enter') #14) Yes
     sleep(.5)
     pag.press('tab')
     sleep(.5)
     pag.press('down')
     pag.press('down')
-    sleep(.5) 
+    sleep(.5)
     pag.press('enter') #15) Yes
     sleep(.5)
     pag.press('tab')
@@ -211,12 +213,12 @@ def applicationQuestions():
     pag.press('down')
     pag.press('down')
     sleep(.5)
-    pag.press('enter') 
+    pag.press('enter')
     pag.press('enter') #16) No
 
     pag.click(continueButton)
 
-     
+
 # applicationQuestions()
 
 listOfFunctions = [firstPage, myInformation, myExperience, applicationQuestions]
@@ -235,4 +237,4 @@ while functionCall < len(listOfFunctions):
 print('over')
 
 
-    
+
